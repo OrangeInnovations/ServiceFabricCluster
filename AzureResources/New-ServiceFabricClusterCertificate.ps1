@@ -28,7 +28,7 @@ New-AzureRmResourceGroup -Name  $ResouceGrp -Location $location
 New-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName $ResouceGrp -Location $location -EnabledForDeployment
 
 
-$SecurePassword = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$SecurePassword = ConvertTo-SecureString -String $CertPassword -AsPlainText -Force
 $CertFileFullPath = $(Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) "\$CertDNSName.pfx")
 
 $NewCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName $CertDNSName 

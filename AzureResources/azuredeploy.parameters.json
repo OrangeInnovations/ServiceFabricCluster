@@ -5,14 +5,17 @@
     "clusterLocation": {
       "value": "centralus"
     },
+    "appInsName": {
+      "value": "appInTspStage"
+    },
     "clusterName": {
-      "value": "GEN-UNIQUE"
+      "value": "tspstagecluster"
     },
     "adminUserName": {
-      "value": "GEN-UNIQUE"
+      "value": "ntdadmin"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": "ntdadmin@Navistar"
     },
     "vmImagePublisher": {
       "value": "MicrosoftWindowsServer"
@@ -39,13 +42,13 @@
       "value": "My"
     },
     "certificateThumbprint": {
-      "value": "GEN-CUSTOM-DOMAIN-SSLCERT-THUMBPRINT"
+      "value": "A05CD08B7AE1F427CDA1415CD2C22C508126060B"
     },
     "sourceVaultValue": {
-      "value": "GEN-KEYVAULT-RESOURCE-ID"
+      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/TspDataFeed-Dev/providers/Microsoft.KeyVault/vaults/TspKeyVault"
     },
     "certificateUrlValue": {
-      "value": "GEN-KEYVAULT-SSL-SECRET-URI"
+      "value": "https://tspkeyvault.vault.azure.net:443/secrets/TspStageSecret/8d8735c637524baebabc981ddc6f0f00"
     },
     "storageAccountType": {
       "value": "Standard_LRS"
@@ -60,7 +63,7 @@
       "value": 5
     },
     "vmNodeType0Size": {
-      "value": "Standard_D2_V2"
+      "value": "Standard_E4S_V3"
     }
   }
 }

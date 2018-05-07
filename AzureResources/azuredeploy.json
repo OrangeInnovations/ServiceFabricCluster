@@ -9,6 +9,12 @@
         "description": "Location of the Cluster"
       }
     },
+    "appInsName": {
+      "type": "string",
+      "metadata": {
+        "description": "Applicatinon Insight Name"
+      }
+    },
     "clusterName": {
       "type": "string",
       "defaultValue": "GEN-UNIQUE",
@@ -157,7 +163,13 @@
     },
     "vmNodeType0Size": {
       "type": "string",
-      "defaultValue": "Standard_D2_V2"
+      "allowedValues": [
+        "Standard_B8ms",
+        "Standard_DS3_v2_Promo",
+        "Standard_E4S_V3",
+        "Standard_E4_v3"
+      ],
+      "defaultValue": "Standard_E4_v3"
     }
   },
   "variables": {
@@ -441,6 +453,15 @@
       }
     },
     {
+      "apiVersion": "2014-04-01",
+      "name": "[parameters('appInsName')]",
+      "type": "Microsoft.Insights/components",
+      "location": "East US",
+      "properties": {
+        "ApplicationId": "[parameters('appInsName')]"
+      }
+    },
+    {
       "apiVersion": "[variables('vmssApiVersion')]",
       "type": "Microsoft.Compute/virtualMachineScaleSets",
       "name": "[variables('vmNodeType0Name')]",
@@ -499,6 +520,7 @@
                     "WadCfg": {
                       "DiagnosticMonitorConfiguration": {
                         "overallQuotaInMB": "50000",
+                        "sinks": "applicationInsights",
                         "EtwProviders": {
                           "EtwEventSourceProviderConfiguration": [
                             {
@@ -515,6 +537,20 @@
                               "DefaultEvents": {
                                 "eventDestination": "ServiceFabricReliableServiceEventTable"
                               }
+                            },
+                            {
+                              "provider": "MyCompany-TspDataFeedApp-GeotabFeedService",
+                              "scheduledTransferPeriod": "PT5M",
+                              "DefaultEvents": {
+                                "eventDestination": "GeotabFeedServiceEventTable"
+                              }
+                            },
+                            {
+                              "provider": "MyCompany-TspDataFeedApp-TspAdminWeb",
+                              "scheduledTransferPeriod": "PT5M",
+                              "DefaultEvents": {
+                                "eventDestination": "TspAdminWebEventTable"
+                              }
                             }
                           ],
                           "EtwManifestProviderConfiguration": [
@@ -529,6 +565,14 @@
                             }
                           ]
                         }
+                      },
+                      "SinksConfig": {
+                        "Sink": [
+                          {
+                            "name": "applicationInsights",
+                            "ApplicationInsights": "[reference(resourceId('Microsoft.Insights/components', parameters('appInsName')), '2014-04-01').InstrumentationKey]"
+                          }
+                        ]
                       }
                     },
                     "StorageAccount": "[variables('applicationDiagnosticsStorageAccountName')]"
@@ -619,7 +663,8 @@
       "name": "[parameters('clusterName')]",
       "location": "[parameters('clusterLocation')]",
       "dependsOn": [
-        "[concat('Microsoft.Storage/storageAccounts/', variables('supportLogStorageAccountName'))]"
+        "[concat('Microsoft.Storage/storageAccounts/', variables('supportLogStorageAccountName'))]",
+        "[resourceId('Microsoft.Insights/components', parameters('appInsName'))]"
       ],
       "properties": {
         "addonFeatures": [
