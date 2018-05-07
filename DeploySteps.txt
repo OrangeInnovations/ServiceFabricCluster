@@ -1,0 +1,4 @@
+
+a. Prepare a keyvault and certificate. New-ServiceFabricClusterCertificate.ps1
+b. Prepare AAD parameters. AADSetup.ps1
+c. Prepare Fabric cluster
