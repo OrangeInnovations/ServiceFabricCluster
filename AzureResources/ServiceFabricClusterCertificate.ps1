@@ -4,14 +4,11 @@
 # This script requires an existing KeyVault that is EnabledForDeployment.  The vault must be in the same region as the cluster.
 # To create a new vault and set the EnabledForDeployment property run:
 #
-#$keyvaultRG="mykevaultrg"
-#$KeyVaultName="mykevaultname"
-#New-AzureRmResourceGroup -Name $KeyvaultRG -Location WestUS
-#New-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName $KeyvaultRG -Location WestUS -EnabledForDeployment
+# New-AzureRmResourceGroup -Name KeyVaults -Location WestUS
+# New-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName KeyVaults -Location WestUS -EnabledForDeployment
 #
 # Once the certificate is created and stored in the vault, the script will provide the parameter values needed for template deployment
 # 
-# You can download the cert from the key-vault portal, if you need it on your machine.
 
 param(
     [string] [Parameter(Mandatory=$true)] $Password='Password!23',
@@ -20,7 +17,18 @@ param(
     [string] [Parameter(Mandatory=$true)] $KeyVaultSecretName='GeofenceDetectionDevSecret'
 )
 
-$SecurePassword = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$ResouceGrp="OccGeofence-Resource"
+$location="centralus"
+$CertPassword="Password!23"
+$CertDNSName="occgeofencedevcluster.centralus.cloudapp.azure.com"
+$KeyVaultName="OccGeofenceKeyVault"
+$KeyVaultSecretName="GeofenceDetectionDevSecret"
+
+New-AzureRmResourceGroup -Name  $ResouceGrp -Location $location
+New-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName $ResouceGrp -Location $location -EnabledForDeployment
+
+
+$SecurePassword = ConvertTo-SecureString -String $CertPassword -AsPlainText -Force
 $CertFileFullPath = $(Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) "\$CertDNSName.pfx")
 
 $NewCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName $CertDNSName 

@@ -23,6 +23,8 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <Content Include="fabric.parameters.json" />
+    <Content Include="fabric.json" />
     <Content Include="azuredeploy-noaad.json" />
     <Content Include="azuredeploy-noaad.parameters.json" />
     <None Include="Azure-login.ps1" />
@@ -31,7 +33,9 @@
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <None Include="FabricServiceDeploy.ps1" />
     <None Include="New-ServiceFabricClusterCertificate.ps1" />
+    <None Include="ServiceFabricClusterCertificate.ps1" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
