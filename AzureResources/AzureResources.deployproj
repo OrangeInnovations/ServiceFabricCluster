@@ -36,6 +36,7 @@
     <None Include="FabricServiceDeploy.ps1" />
     <None Include="New-ServiceFabricClusterCertificate.ps1" />
     <None Include="ServiceFabricClusterCertificate.ps1" />
+    <None Include="VMSS-autoscale.ps1" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

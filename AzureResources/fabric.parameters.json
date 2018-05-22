@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "clusterLocation": {
-      "value": "centralus"
+      "value": "eastus"
     },
     "appInsName": {
-      "value": "appInGeofenceDetectDev"
+      "value": "appInGeofenceDetectStage"
     },
     "clusterName": {
-      "value": "geofencedevcluster"
+      "value": "nststeuagfapi"
     },
     "adminUserName": {
       "value": "ntdadmin"

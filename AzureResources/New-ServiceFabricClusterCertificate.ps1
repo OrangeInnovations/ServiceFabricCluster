@@ -15,9 +15,9 @@
 
 param(
     [string] [Parameter(Mandatory=$true)] $Password='Password!23',
-    [string] [Parameter(Mandatory=$true)] $CertDNSName='occgeofencedevcluster.centralus.cloudapp.azure.com',
-    [string] [Parameter(Mandatory=$true)] $KeyVaultName='OccGeofenceKeyVault',
-    [string] [Parameter(Mandatory=$true)] $KeyVaultSecretName='GeofenceDetectionDevSecret'
+    [string] [Parameter(Mandatory=$true)] $CertDNSName='nststeuagfapi.eastus.cloudapp.azure.com',
+    [string] [Parameter(Mandatory=$true)] $KeyVaultName='OccGeofenceStageKeyVault',
+    [string] [Parameter(Mandatory=$true)] $KeyVaultSecretName='GeofenceDetectionStageSecret'
 )
 
 $SecurePassword = ConvertTo-SecureString -String $Password -AsPlainText -Force
