@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d386df77-1055-41a3-9105-f1d25ca88a91</ProjectGuid>
+    <ProjectGuid>96866286-008a-46bd-83d4-175b241bea29</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <PrepareForBuildDependsOn>
@@ -23,21 +23,13 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Content Include="fabric-scale.json" />
-    <Content Include="fabric.parameters.json" />
-    <Content Include="fabric.json" />
-    <Content Include="azuredeploy-noaad.json" />
-    <Content Include="azuredeploy-noaad.parameters.json" />
-    <None Include="Azure-login.ps1" />
-    <None Include="AADSetup.ps1" />
+    <Content Include="azuredeploy.parameters.json" />
+    <Content Include="azuredeploy.json" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
-    <None Include="FabricServiceDeploy.ps1" />
-    <None Include="New-ServiceFabricClusterCertificate.ps1" />
-    <None Include="ServiceFabricClusterCertificate.ps1" />
-    <None Include="VMSS-autoscale.ps1" />
+    <Content Include="README.md" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
