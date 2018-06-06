@@ -23,6 +23,8 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <Content Include="geofencedetectionCluster.parameters.json" />
+    <Content Include="geofencedetectionCluster.json" />
     <Content Include="fabric-scale.json" />
     <Content Include="fabric.parameters.json" />
     <Content Include="fabric.json" />
@@ -34,6 +36,7 @@
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <None Include="GeofenceDectionFabricDeploy.ps1" />
     <None Include="FabricServiceDeploy.ps1" />
     <None Include="New-ServiceFabricClusterCertificate.ps1" />
     <None Include="ServiceFabricClusterCertificate.ps1" />

@@ -5,14 +5,14 @@
 #$vaultName="myvault"
 #$vaultResourceGroupName="myvaultrg"
 
-$resourceGroupLocation="centralus"
-$resourceGroupName="OccGeofence-devcluster"
-$CertSubjectName="geofencedevcluster"
+$resourceGroupLocation="eastus"
+$resourceGroupName="nststeuagfrgsfc"
+$CertSubjectName="nststeuagfapi.eastus.cloudapp.azure.com"
 $certPassword="Password!23" | ConvertTo-SecureString -AsPlainText -Force 
-$certOutputFolder="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\certificates\dev"
+$certOutputFolder="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\certificates\stage"
 
-$parameterFilePath="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\geofencedetectionCluster.parameters.json"
-$templateFilePath="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\geofencedetectionCluster.json"
+$parameterFilePath="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\fabric.parameters.json"
+$templateFilePath="C:\SourceRepo\Navistar\ServiceFabricCluster\AzureResources\fabric.json"
 
 
 New-AzureRmServiceFabricCluster -ResourceGroupName $resourceGroupName -CertificateOutputFolder $certOutputFolder -CertificatePassword $certpassword -CertificateSubjectName $CertSubjectName -TemplateFile $templateFilePath -ParameterFile $parameterFilePath
