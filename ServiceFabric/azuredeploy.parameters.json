@@ -1,0 +1,33 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "value": "nsprdeuagfsfc"
+    },
+    "appInsName": {
+      "value": "appInGeofenceDetectProd"
+    },
+    "adminUserName": {
+      "value": "ntdadmin"
+    },
+    "adminPassword": {
+      "value": "ntdadmin@Navista"
+    },
+    "vmImageSku": {
+      "value": "2016-Datacenter-with-Containers"
+    },
+    "nodeTypeSize": {
+      "value": "Standard_E4S_V3"
+    },
+    "certificateThumbprint": {
+      "value": "769C1F778DD1A2E79FC920D71926E2CF43FCCF4D"
+    },
+    "sourceVaultResourceId": {
+      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nsprdeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nsprdeuagfrgsfc"
+    },
+    "certificateUrlValue": {
+      "value": "https://nsprdeuagfrgsfc.vault.azure.net/secrets/geofencedetection-prod/aed5ebdd2e91479f946d6cee7fd935bc"
+    }
+  }
+}
