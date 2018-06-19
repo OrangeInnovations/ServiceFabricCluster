@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "clusterLocation": {
-      "value": "centralus"
+      "value": "eastus"
     },
     "appInsName": {
-      "value": "appInGeofenceDetectDev"
+      "value": "appInGeofenceDetectProd"
     },
     "clusterName": {
-      "value": "geofencedevcluster"
+      "value": "nsprdeuagfsfc"
     },
     "adminUserName": {
       "value": "ntdadmin"
@@ -42,13 +42,13 @@
       "value": "My"
     },
     "certificateThumbprint": {
-      "value": ""
+      "value": "9013FB33FB7959D8F072C1E056F83D7669D06529"
     },
     "sourceVaultValue": {
-      "value": ""
+      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nsprdeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nsprdeuagfrgsfc"
     },
     "certificateUrlValue": {
-      "value": ""
+      "value": "https://nsprdeuagfrgsfc.vault.azure.net/secrets/geofencedetection-prod/54b9748d5033482e8208abf9844f4293"
     },
     "storageAccountType": {
       "value": "Standard_LRS"
