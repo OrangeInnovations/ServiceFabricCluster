@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "clusterLocation": {
-      "value": "centralus"
+      "value": "eastus"
     },
     "appInsName": {
-      "value": "appInTspStage"
+      "value": "appInGeofenceDetectProd"
     },
     "clusterName": {
-      "value": "tspstagecluster"
+      "value": "nsprdeuagfapi"
     },
     "adminUserName": {
       "value": "ntdadmin"
@@ -42,13 +42,13 @@
       "value": "My"
     },
     "certificateThumbprint": {
-      "value": "A05CD08B7AE1F427CDA1415CD2C22C508126060B"
+      "value": "259BED11340E6E93B2374A32B388F9C501D56A28"
     },
     "sourceVaultValue": {
-      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/TspDataFeed-Dev/providers/Microsoft.KeyVault/vaults/TspKeyVault"
+      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nsprdeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nsprdeuagfrgsfc"
     },
     "certificateUrlValue": {
-      "value": "https://tspkeyvault.vault.azure.net:443/secrets/TspStageSecret/8d8735c637524baebabc981ddc6f0f00"
+      "value": "https://nsprdeuagfrgsfc.vault.azure.net:443/secrets/geofencedetection-prod/e9393de8fb2f4c04910ba2c9a5ba5b85"
     },
     "storageAccountType": {
       "value": "Standard_LRS"

@@ -213,7 +213,7 @@
     "lbProbeID0": "[concat(variables('lbID0'),'/probes/FabricGatewayProbe')]",
     "lbHttpProbeID0": "[concat(variables('lbID0'),'/probes/FabricHttpGatewayProbe')]",
     "lbNatPoolID0": "[concat(variables('lbID0'),'/inboundNatPools/LoadBalancerBEAddressNatPool')]",
-    "vmNodeType0Name": "[toLower(concat('NT1', variables('vmName')))]",
+    "vmNodeType0Name": "[toLower(concat('MYNT1', variables('vmName')))]",
     "vmStorageAccountName0": "[toLower(concat(uniqueString(resourceGroup().id), '1', '0' ))]"
   },
   "resources": [
@@ -539,17 +539,24 @@
                               }
                             },
                             {
-                              "provider": "MyCompany-TspDataFeedApp-GeotabFeedService",
+                              "provider": "MyCompany-OccGeofenceFabric-RouterService",
                               "scheduledTransferPeriod": "PT5M",
                               "DefaultEvents": {
-                                "eventDestination": "GeotabFeedServiceEventTable"
+                                "eventDestination": "RouterServiceEventTable"
                               }
                             },
                             {
-                              "provider": "MyCompany-TspDataFeedApp-TspAdminWeb",
+                              "provider": "MyCompany-OccGeofenceFabric-MessageService",
                               "scheduledTransferPeriod": "PT5M",
                               "DefaultEvents": {
-                                "eventDestination": "TspAdminWebEventTable"
+                                "eventDestination": "MessageServiceEventTable"
+                              }
+                            },
+                            {
+                              "provider": "MyCompany-OccGeofenceFabric-GeofenceFabricAPI",
+                              "scheduledTransferPeriod": "PT5M",
+                              "DefaultEvents": {
+                                "eventDestination": "GeofenceFabricAPIEventTable"
                               }
                             }
                           ],

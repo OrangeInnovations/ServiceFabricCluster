@@ -1,0 +1,81 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appInsName": {
+      "value": "appInGeofenceDetectProd"
+    },
+    "clusterName": {
+      "value": "nsprdeuagfsfc"
+    },
+    "clusterLocation": {
+      "value": "eastus"
+    },
+    "computeLocation": {
+      "value": "eastus"
+    },
+    "adminUserName": {
+      "value": "ntdadmin"
+    },
+    "adminPassword": {
+      "value": "ntdadmin@Navistar"
+    },
+    "nicName": {
+      "value": "NIC-nsprdeuagfsfc"
+    },
+    "publicIPAddressName": {
+      "value": "nsprdeuagfsfc-PubIP"
+    },
+    "dnsName": {
+      "value": "nsprdeuagfsfc"
+    },
+    "virtualNetworkName": {
+      "value": "VNet-nsprdeuagfsfc"
+    },
+    "lbName": {
+      "value": "LB-nsprdeuagfsfc"
+    },
+    "lbIPName": {
+      "value": "LBIP-nsprdeuagfsfc"
+    },
+    "applicationDiagnosticsStorageAccountName": {
+      "value": "sfdgnsprdeuagfsfc7063"
+    },
+    "supportLogStorageAccountName": {
+      "value": "sflogsnsprdeuagfsfc5071"
+    },
+    "sourceVaultValue": {
+      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nsprdeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nsprdeuagfrgsfc"
+    },
+    "certificateUrlValue": {
+      "value": "https://nsprdeuagfrgsfc.vault.azure.net:443/secrets/geofencedetection-prod/b24252b4558d4453992ea10b60189c06"
+    },
+    "certificateThumbprint": {
+      "value": "65A416AD30E96A165D5DC1B2B1DA26C1FAC42E8D"
+    },
+    "vmImageSku": {
+      "value": "2016-Datacenter-with-Containers"
+    },
+    "vmImageOffer": {
+      "value": "WindowsServer"
+    },
+    "nt0ephemeralStartPort": {
+      "value": 49152
+    },
+    "nt0ephemeralEndPort": {
+      "value": 65534
+    },
+    "nt0applicationStartPort": {
+      "value": 20000
+    },
+    "nt0applicationEndPort": {
+      "value": 30000
+    },
+    "nt0fabricTcpGatewayPort": {
+      "value": 19000
+    },
+    "nt0fabricHttpGatewayPort": {
+      "value": 19080
+    }
+  }
+}
