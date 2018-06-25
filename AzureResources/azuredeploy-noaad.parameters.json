@@ -42,13 +42,13 @@
       "value": "My"
     },
     "certificateThumbprint": {
-      "value": "259BED11340E6E93B2374A32B388F9C501D56A28"
+      "value": "51B6545635F259156216A0E59890044D1DB41F5E"
     },
     "sourceVaultValue": {
       "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nsprdeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nsprdeuagfrgsfc"
     },
     "certificateUrlValue": {
-      "value": "https://nsprdeuagfrgsfc.vault.azure.net:443/secrets/geofencedetection-prod/e9393de8fb2f4c04910ba2c9a5ba5b85"
+      "value": "https://nsprdeuagfrgsfc.vault.azure.net:443/secrets/geofencedetection-prod/4e3ff6b3cf9b444fb5750ca4aa332c59"
     },
     "storageAccountType": {
       "value": "Standard_LRS"
