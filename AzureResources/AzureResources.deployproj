@@ -23,12 +23,13 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <Content Include="GeofenceStage.parameters.json" />
     <Content Include="geofencedetectionCluster.parameters.json" />
     <Content Include="geofencedetectionCluster.json" />
     <Content Include="fabric-scale.json" />
     <Content Include="fabric.parameters.json" />
     <Content Include="fabric.json" />
-    <Content Include="azuredeploy-noaad.json" />
+    <Content Include="GeofenceDetection.json" />
     <Content Include="azuredeploy-noaad.parameters.json" />
     <None Include="Azure-login.ps1" />
     <None Include="AADSetup.ps1" />
