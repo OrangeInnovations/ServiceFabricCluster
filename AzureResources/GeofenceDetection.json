@@ -22,6 +22,14 @@
         "description": "Name of your cluster - Between 3 and 23 characters. Letters and numbers only"
       }
     },
+    "nodeTypedurabilityLevel": {
+      "type": "string",
+      "defaultValue": "Bronze"
+    },
+    "clusterReliabilityLevel": {
+      "type": "string",
+      "defaultValue": "Silver"
+    },
     "adminUserName": {
       "type": "string",
       "defaultValue": "GEN-UNIQUE",
@@ -494,7 +502,7 @@
                     "clusterEndpoint": "[reference(parameters('clusterName')).clusterEndpoint]",
                     "nodeTypeRef": "[variables('vmNodeType0Name')]",
                     "dataPath": "D:\\SvcFab",
-                    "durabilityLevel": "Bronze",
+                    "durabilityLevel": "[parameters('nodeTypedurabilityLevel')]",
                     "enableParallelJobs": true,
                     "nicPrefixOverride": "[variables('subnet0Prefix')]",
                     "certificate": {
@@ -710,7 +718,7 @@
               "startPort": "[variables('nt0applicationStartPort')]"
             },
             "clientConnectionEndpointPort": "[variables('nt0fabricTcpGatewayPort')]",
-            "durabilityLevel": "Bronze",
+            "durabilityLevel": "[parameters('nodeTypedurabilityLevel')]",
             "ephemeralPorts": {
               "endPort": "[variables('nt0ephemeralEndPort')]",
               "startPort": "[variables('nt0ephemeralStartPort')]"
@@ -722,7 +730,7 @@
           }
         ],
         "provisioningState": "Default",
-        "reliabilityLevel": "Silver",
+        "reliabilityLevel": "[parameters('clusterReliabilityLevel')]",
         "reverseProxyCertificate": {
           "thumbprint": "[parameters('certificateThumbprint')]",
           "x509StoreName": "[parameters('certificateStoreValue')]"

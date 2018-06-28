@@ -23,6 +23,7 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <Content Include="GeofenceDetectionProd.parameters.json" />
     <Content Include="GeofenceStage.parameters.json" />
     <Content Include="geofencedetectionCluster.parameters.json" />
     <Content Include="geofencedetectionCluster.json" />
@@ -40,6 +41,7 @@
     <None Include="GeofenceDectionFabricDeploy.ps1" />
     <None Include="FabricServiceDeploy.ps1" />
     <None Include="New-ServiceFabricClusterCertificate.ps1" />
+    <None Include="ServiceFabricCluster-operation.ps1" />
     <None Include="ServiceFabricClusterCertificate.ps1" />
     <None Include="VMSS-autoscale.ps1" />
   </ItemGroup>
