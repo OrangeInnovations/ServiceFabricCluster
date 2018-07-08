@@ -11,6 +11,12 @@
     "clusterName": {
       "value": "nststeuagfapi"
     },
+    "nodeTypedurabilityLevel": {
+      "value": "Silver"
+    },
+    "clusterReliabilityLevel": {
+      "value": "Silver"
+    },
     "adminUserName": {
       "value": "ntdadmin"
     },
