@@ -15,6 +15,6 @@ Remove-ServiceFabricNodeState -NodeName '_mynt1vm_12' -Force
 Remove-ServiceFabricNodeState -NodeName '_mynt1vm_13' -Force
 
 Remove-ServiceFabricApplication fabric:/OccGeofenceFabric
-Unregister-ServiceFabricApplicationType OccGeofenceFabricType 1.0.1
+Unregister-ServiceFabricApplicationType OccGeofenceFabricType 1.3.0
 
 Get-ServiceFabricApplicationHealth fabric:/OccGeofenceFabric -ExcludeHealthStatistics
