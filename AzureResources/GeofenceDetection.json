@@ -187,7 +187,8 @@
         "Standard_B8ms",
         "Standard_DS3_v2_Promo",
         "Standard_E4S_V3",
-        "Standard_E4_v3"
+        "Standard_E4_v3",
+        "Standard_B2ms"
       ],
       "defaultValue": "Standard_E4_v3"
     }

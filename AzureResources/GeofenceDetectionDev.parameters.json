@@ -1,0 +1,75 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterLocation": {
+      "value": "eastus"
+    },
+    "appInsName": {
+      "value": "appInGeofenceDev"
+    },
+    "clusterName": {
+      "value": "nsdeveuagfapi"
+    },
+    "nodeTypedurabilityLevel": {
+      "value": "Bronze"
+    },
+    "clusterReliabilityLevel": {
+      "value": "Bronze"
+    },
+    "adminUserName": {
+      "value": "ntdadmin"
+    },
+    "adminPassword": {
+      "value": "ntdadmin@Navistar"
+    },
+    "vmImagePublisher": {
+      "value": "MicrosoftWindowsServer"
+    },
+    "vmImageOffer": {
+      "value": "WindowsServer"
+    },
+    "vmImageSku": {
+      "value": "2016-Datacenter-with-Containers"
+    },
+    "vmImageVersion": {
+      "value": "latest"
+    },
+    "loadBalancedAppPort1": {
+      "value": 80
+    },
+    "loadBalancedAppPort2": {
+      "value": 443
+    },
+    "clusterProtectionLevel": {
+      "value": "EncryptAndSign"
+    },
+    "certificateStoreValue": {
+      "value": "My"
+    },
+    "certificateThumbprint": {
+      "value": "B8096ED7C1FA184DE3988419B667164B713B6FC8"
+    },
+    "sourceVaultValue": {
+      "value": "/subscriptions/2d88c65a-3736-4859-8fd7-df0e6b508709/resourceGroups/nsdeveuagfsfcrg/providers/Microsoft.KeyVault/vaults/OccGeofenceDevKeyVault"
+    },
+    "certificateUrlValue": {
+      "value": "https://occgeofencedevkeyvault.vault.azure.net/secrets/occgeofencedev/25343122312c4823b50d4081d84f902c"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "supportLogStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "applicationDiagnosticsStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "nt0InstanceCount": {
+      "value": 3
+    },
+    "vmNodeType0Size": {
+      "value": "Standard_B2ms"
+    }
+  }
+}
