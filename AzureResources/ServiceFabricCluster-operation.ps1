@@ -18,3 +18,5 @@ Remove-ServiceFabricApplication fabric:/OccGeofenceFabric
 Unregister-ServiceFabricApplicationType OccGeofenceFabricType 1.3.0
 
 Get-ServiceFabricApplicationHealth fabric:/OccGeofenceFabric -ExcludeHealthStatistics
+
+Remove-ServiceFabricService -ServiceName fabric:/OccGeofenceFabric/MessageService -ForceRemove

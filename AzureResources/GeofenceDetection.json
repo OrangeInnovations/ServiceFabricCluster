@@ -129,6 +129,18 @@
         "description": "Refers to the location URL in your key vault where the certificate was uploaded, it is should be in the format of https://<name of the vault>.vault.azure.net:443/secrets/<exact location>"
       }
     },
+    "diskType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "StandardSSD_LRS",
+        "Standard_LRS",
+        "Premium_LRS"
+      ],
+      "metadata": {
+        "description": "The Storage type of the data Disks"
+      }
+    },
     "storageAccountType": {
       "type": "string",
       "allowedValues": [
@@ -656,7 +668,7 @@
               "caching": "ReadOnly",
               "createOption": "FromImage",
               "managedDisk": {
-                "storageAccountType": "[parameters('storageAccountType')]"
+                "storageAccountType": "[parameters('diskType')]"
               }
             }
           }

@@ -24,9 +24,7 @@
   <!-- vertag<:>end -->
   <ItemGroup>
     <Content Include="GeofenceDetectionProd.parameters.json" />
-    <Content Include="GeofenceStage.parameters.json" />
-    <Content Include="geofencedetectionCluster.parameters.json" />
-    <Content Include="geofencedetectionCluster.json" />
+    <Content Include="GeofenceDetectionStage.parameters.json" />
     <Content Include="fabric-scale.json" />
     <Content Include="fabric.parameters.json" />
     <Content Include="fabric.json" />
