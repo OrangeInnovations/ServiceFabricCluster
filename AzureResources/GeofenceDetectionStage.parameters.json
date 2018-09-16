@@ -51,10 +51,10 @@
       "value": "259BED11340E6E93B2374A32B388F9C501D56A28"
     },
     "sourceVaultValue": {
-      "value": "/subscriptions/0732b52e-6aa9-4098-87e1-c148f2a4f878/resourceGroups/nststeuagfrgsfc/providers/Microsoft.KeyVault/vaults/nststeuagfrgsfc"
+      "value": "/subscriptions/c7542117-1f26-40c8-bd74-8bd033181270/resourceGroups/nststeuagfrgsfc/providers/Microsoft.KeyVault/vaults/OccGeofenceStageKeyVault"
     },
     "certificateUrlValue": {
-      "value": "https://nststeuagfrgsfc.vault.azure.net:443/secrets/nststeuagfrgsfc20180520110811/6c7b0b6fc41649f5ab249727b5deff5f"
+      "value": "https://occgeofencestagekeyvault.vault.azure.net/secrets/occgeofencestage/d3f1f411fb684c38bbc6d0d3f2d5a047"
     },
     "storageAccountType": {
       "value": "Standard_LRS"
@@ -69,7 +69,7 @@
       "value": 5
     },
     "vmNodeType0Size": {
-      "value": "Standard_E4S_V3"
+      "value": "Standard_E2s_v3"
     }
   }
 }
